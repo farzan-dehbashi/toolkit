@@ -1,0 +1,8 @@
+to build it you should modify ~/.zshrc file
+then add a line like below:
+alias start='cd ~/Desktop'
+
+from now on start is equal to typing that value assigned to it.
+remember that you should type:
+source ~/.zshrc
+in terminal after this modification to make it active.
