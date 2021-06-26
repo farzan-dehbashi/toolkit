@@ -33,4 +33,28 @@ For previous ones:
 ```
 git show HEAD~<number of commits that you whant to go back>
 ```
+### To see all of the files modified in a git commit:
+```
+git ls-tree HEAD
+```
+To view the file, you should use the identifier backed from the ls-tree command and feed it to:
+```
+git show <identifier e.g. 64629...>
+```
+### Objects 
 
+#### Commits
+#### Blogs (Files)
+#### Trees (Directories)
+#### Tags
+
+### Restore
+To undo add commands.
+#### To restore a file from staging area and bring it back to working directory only:
+```
+ git restore --staged <file name>
+```
+#### To undo changes of a file
+```
+git restore <file name>
+```
