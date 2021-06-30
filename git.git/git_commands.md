@@ -58,3 +58,4 @@ To undo add commands.
 ```
 git restore <file name>
 ```
+##### Note that 'git restore' deletes all local changes to that file and 'git restore --staged', only removes the file from staging area and the local changes still remains intact.
