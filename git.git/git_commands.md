@@ -72,3 +72,7 @@ git branch
 ```
 git checkout <branch name>
 ```
+### To delete a branch
+```
+git branch -d <branch name>
+```
