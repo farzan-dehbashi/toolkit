@@ -76,3 +76,5 @@ git checkout <branch name>
 ```
 git branch -d <branch name>
 ```
+## To revert changes
+First step is to see what version do you want to get into. To do so, use <git log> then copy the hash of the commit and then use <git reset hash_number> to revert changes. But after this only the git file is heading toward that desired commit and not local files. To update local files use <git stash> to stash the local changes and then use git reset --hard to update the local files to match the head in the git file.
