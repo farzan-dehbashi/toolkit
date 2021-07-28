@@ -16,3 +16,7 @@ then add the path to the env vars:
 ```
 export PYTHONPATH='/Users/.../customizedlib')
 ```
+## To install a pip library
+```
+python3 -m pip install <lib name>
+```
