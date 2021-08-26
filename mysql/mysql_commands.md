@@ -36,6 +36,14 @@ CREATE TABLE <table name>
 <column name> VARCHAR(50) DEFAULT <default value>,
 );
 ```
+Dictate not null
+```
+CREATE TABLE <table name> (<column1> <column type>  NOT NULL, <column2> <data type2> NOT NULL);
+```
+Primary key
+```
+CREATE TABLE <table name> (<column1> <type>, PRIMARY KEY (column1));
+```
 #### Show tables
 ```
 SHOW tables;
