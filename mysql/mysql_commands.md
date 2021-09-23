@@ -72,4 +72,11 @@ Show warnings
 ```
 SHOW WARNINGS;
 ```
+### Select
+Select and alias:
+```
+SELECT <table column name> AS <alias name> FROM <table_name>;
+```
+
+
 

@@ -11,7 +11,7 @@ tests = [{'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 7}, 'output':
   'output': 7},
  {'input': {'cards': [8, 8, 6, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0],
    'query': 6},
-  'output': 7}]
+  'output': 2}]
 
 def locate_card(cards, query):
     """
@@ -28,6 +28,8 @@ def locate_card(cards, query):
         while l <= r:
             m = math.floor((r+l)/2)
             if cards[m] == query:
+                while m-1 >= 0 and cards[m-1] == query:
+                    m = m - 1
                 return m
             elif cards[m] < query:
                 r = m - 1
