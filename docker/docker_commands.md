@@ -33,4 +33,13 @@ docker container run -i -t --name <container name> <container type> bash#-t is a
 ```
 #### To get a shell into container by starting, use -ai instead of -it
 
- 
+# Images
+
+## To get a specific image version:
+```
+docker pull <image_name>:<version>
+``` 
+For example:
+```
+docker pull nginx:1.11.9
+```
