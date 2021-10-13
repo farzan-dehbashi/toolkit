@@ -1,0 +1,2 @@
+This jupyter notebook describes extensive about read_csv, os, check_dir, download, ....:
+https://jovian.ai/aakashns/python-os-and-filesystem?action=login
