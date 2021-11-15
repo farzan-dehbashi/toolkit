@@ -68,5 +68,5 @@ CMD ['python3', './<file.py>'] # to simply run the file
 
 ### Then we should build the file
 ```
-docker build -t <image name>
+docker build -t <image name> <directory of saving eg <.>>
 ```
