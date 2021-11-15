@@ -43,3 +43,30 @@ For example:
 ```
 docker pull nginx:1.11.9
 ```
+
+
+# Dockerize an appliction
+## Dockerfile
+file to make image
+## Image
+file to create container
+## Container
+actual process
+
+## Make docker file:
+```
+touch Dockerfile
+vim Dockerfile
+```
+Then inside the file:
+```
+FROM python:3.8 # uses dockerhub image
+ADD <filename.py> <destination directory>
+RUN pip3 install numpy pandas # to install the dependencies
+CMD ['python3', './<file.py>'] # to simply run the file
+```
+
+### Then we should build the file
+```
+docker build -t <image name>
+```
