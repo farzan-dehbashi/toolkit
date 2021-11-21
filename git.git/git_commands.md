@@ -15,9 +15,13 @@ To see one short:
 ```
 git status -s
 ```
-### See the changed lines of the files in the stagin area 
+### See the changed lines of the files in the stagin area vs repository
 ```
 git diff --staged
+```
+### See differences of working directory to staged
+```
+git diff
 ```
 ### Configure git
 ```
