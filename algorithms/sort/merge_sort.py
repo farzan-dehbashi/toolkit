@@ -1,38 +1,44 @@
-def merge(arr, l, m, r):
-    l_arr = arr[l:m]
-    r_arr = arr[m+1:r+1]
-    l_cursor = 0
-    r_cursor = 0
-    result_arr = []
-    result_cursor = 0
-    while l_cursor < len(l_arr) and r_cursor < len(r_arr):
-        if l_arr[l_cursor] < r_arr[r_cursor]:
-            result_arr.append(l_arr[l_cursor])
-            l_cursor += 1
-            result_cursor += 1
-        else:
-            result_arr.append(r_arr[r_cursor])
-            r_cursor += 1
-            result_cursor += 1
-        print(f'l_c= {l_cursor}, r_c= {r_cursor}, r_c= {result_cursor}')
 
-    if len(l_arr) -1 > l_cursor:
-        result_arr += l_arr[l_cursor:]
-    elif len(r_arr) -1 > r_cursor:
-        result_arr += r_arr[r_cursor:]
-    arr = result_arr
+
+def merge(arr, left, middle, right):
+    # The second param is non inclusive so it should be increased by one
+    left_copy = arr[left: middle+1]
+    right_copy = arr[middle+1:right+1]
+
+    left_index = 0
+    right_index = 0
+    sorted_index = 0
+
+    while left_index < len(left_copy) and right_index < len(right_copy):
+        print(f'left_index= {left_index}, right_index= {right_index}, sortedindex= {sorted_index}, arr={arr}')
+        if left_copy[left_index] < right_copy[right_index]:
+            arr[sorted_index] = left_copy[left_index]
+            left_index += 1
+        else:
+            arr[sorted_index] = right_copy[right_index]
+            right_index += 1
+
+        sorted_index += 1
+
+    while left_index < len(left_copy):
+        arr[sorted_index] = left_copy[left_index]
+        left_index += 1
+        sorted_index += 1
+    while right_index < len(right_copy):
+        arr[sorted_index] = right_copy[right_index]
+        right_index += 1
+        sorted_index += 1
+
     return arr
 
+def merge_sort(arr, left, right):
+    if left < right:
+        middle = (left + right) // 2
+        merge_sort(arr, left, middle)
+        merge_sort(arr, middle+1, right)
+        merge(arr, left, middle, right)
+    return arr
 
-def merge_sort(list, l, r):
-    if l < r:
-        m = (l+(r-1)) // 2
-        merge_sort(list,l,m)
-        merge_sort(list,m+1,r)
-        merge(list, l,m,r)
-    return list
+array = [1,2,3,1,2,3]
 
-
-arr = [1,2,3,2,3,4,5,6,7]
-merge(arr, 0,4, 8)
-print(arr)
+print(merge_sort(array, 0, len(array)-1))
