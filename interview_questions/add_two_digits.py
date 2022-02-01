@@ -29,9 +29,10 @@ cursor1 = linked_list1.head
 cursor2 = linked_list2.head
 
 digits = []
+carry = 0
 while cursor1 != None and cursor2 != None:
     digit = int(cursor1.data) + int(cursor2.data)
-    digits.append(digit)
+    digits.append(digit + carry)
     cursor1 = cursor1.next
     cursor2 = cursor2.next
 
