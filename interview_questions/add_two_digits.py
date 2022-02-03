@@ -16,10 +16,10 @@ node1.next = node2
 linked_list1 = LinkedList()
 linked_list1.head = node0
 
-node0 = Node(4)
-node1 = Node(3)
+node0 = Node(9)
+node1 = Node(9)
 node0.next = node1
-node2 = Node(2)
+node2 = Node(9)
 node1.next = node2
 
 linked_list2 = LinkedList()
