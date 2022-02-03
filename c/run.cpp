@@ -8,7 +8,9 @@ using namespace std;
 int main()
 {
     // prints hello world
-    cout << "Hello World";
- 
+    string f_name = "Farzan";
+    string l_name = "Dehbashi";
+    int age = 0;
+    cout << f_name << " is " << age << " years old." << endl;
     return 0;
 }
