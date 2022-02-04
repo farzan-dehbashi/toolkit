@@ -5,12 +5,14 @@
 using namespace std;
  
 // Main() function: where the execution of program begins
-int main()
-{
+void numbers(){
     // prints hello world
-    string f_name = "Farzan";
-    string l_name = "Dehbashi";
-    int age = 0;
-    cout << f_name << " is " << age << " years old." << endl;
-    return 0;
+  string phrase = "aFarzan";
+  string part = "Far";
+  cout << phrase.find(part) << endl;
+  cout << phrase.substr(0,3) << endl ;
+}
+int main(){
+  // numbers();
+  
 }
