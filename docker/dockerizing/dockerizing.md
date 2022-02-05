@@ -1,4 +1,5 @@
 # Dockerizing a simple python file
+Link: https://www.youtube.com/watch?v=8uaDoMuDK6E&t=841s&ab_channel=DigitalSreeni
 It is easy! You should generate a Docker file. In order to make docker get to know what files of your container should be used and what other additional images should be used to make your container work. 
 make a <Dockerfile>
 ```
