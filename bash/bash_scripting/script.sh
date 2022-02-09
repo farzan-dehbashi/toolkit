@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# clear 
+clear 
 
 store_in_file (){
     echo 'hi' > store_in_file.txt
@@ -94,7 +94,18 @@ arrays(){
     echo ${arr[@]}
     echo ${arr[2]}
 }
+
+send_email(){
+    echo "send"
+}
+
+select_func(){
+    select item0 in item1 item2 item3 item4
+    do
+        echo "$item0"
+    done
+}
 ############
-arrays
+select_func
 
 
