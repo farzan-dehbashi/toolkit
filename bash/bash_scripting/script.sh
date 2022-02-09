@@ -1,6 +1,6 @@
 #! /bin/bash
 
-clear 
+# clear 
 
 store_in_file (){
     echo 'hi' > store_in_file.txt
@@ -52,8 +52,47 @@ for_loop3(){
 }
 
 inputs(){
-    echo $1
+    while read line
+    do
+        echo "$line"
+    done < "$1"
+}
+
+strings(){
+    echo "enter str1:"
+    read str1
+    echo "enter str2:"
+    read str2
+
+    if [ "$str1" == "$str2" ]
+    then
+        echo "strings are equal"
+    else
+        echo "strings are not equal"
+    fi
+    echo 
+}
+
+pipe(){
+    ls ./ | while read line
+    do
+        echo  "$line exists in this directory"
+    done
+}
+
+math(){
+    var1=1
+    var2=2
+    echo $(( $var1 + $var2 ))
+}
+
+arrays(){
+    var1=1
+    var2=2
+    var3=3
+    arr=()
 }
 ############
-inputs($1)
+math
+
 
