@@ -1,3 +1,3 @@
-git add ./git_push.sh
+git add ./run.cpp
 git commit -m $1
 git push

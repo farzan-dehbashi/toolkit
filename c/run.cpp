@@ -42,13 +42,13 @@ void arrs(){
   cout << arr[0] << endl;
 }
 
-int factorial(int num){
-  int result = 1;
-  while (num >= 1){
-    result *= num;
-    num --;
-  } 
-}
+// int factorial(int num){
+//   int result = 1;
+//   while (num >= 1){
+//     result *= num;
+//     num --;
+//   } 
+// }
 
 void calculator(){
     float num1, num2, res;
@@ -78,6 +78,19 @@ void calculator(){
     }
   }
 
+  // int pow(int base, int pow){
+  //   int res = 1;
+  //   for (int i = 0; i < pow; i++){
+  //     res *= base;
+  //   }
+  //   return res;
+  // }
+
+  void arr_2d (){
+    int number_grid [3][2] = {{1,2},{3,4},{5,6}};
+    cout << number_grid[1][0] << endl;
+  }
+
 int main(){
   // numbers();
   // numbers();
@@ -86,5 +99,8 @@ int main(){
   // arrs();
   // cout << factorial(4) << endl;
   // calculator();
+  // cout << pow(2,3) << endl;
+  // arr_2d();
+
   return 0;
 }

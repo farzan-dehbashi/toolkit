@@ -1,4 +1,9 @@
 import React from 'react';
-import reactDom from 'react-dom';
+import ReactDom from 'react-dom';
 
-const element = <h1>Hello world</h1>
+const element = <h1>Hello world</h1> ;
+// saves changes
+// console.log(element) 
+
+//render the object to show it
+ReactDom.render(element, document.getElementById('root'));
