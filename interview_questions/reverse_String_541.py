@@ -24,5 +24,12 @@ def reverse_complex_string(string, k):
             
         cursor += 1
     return res
+
+
+def enhanced_reverse(string, k):
+    list_string = list(string)
+    for cursor in range(0, len(list_string), 2*k):
+        list_string[cursor:cursor+k] = reversed(list_string[cursor:cursor+k])
+    return ''.join(list_string)
 if __name__ == '__main__':
     print(reverse_complex_string('abcdefg', k = 2))
