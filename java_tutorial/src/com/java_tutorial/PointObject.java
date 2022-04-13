@@ -1,2 +1,10 @@
-package com.java_tutorial;public class PointObject {
+package com.java_tutorial;
+
+import java.awt.*;
+
+public class PointObject {
+    public static void print_point_objects(){
+        Point point_object = new Point(1,2);
+        System.out.println(point_object);
+    }
 }
