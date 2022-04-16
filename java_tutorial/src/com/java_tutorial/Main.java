@@ -9,6 +9,9 @@ public class Main {
 //        PointObject.print_point_objects();
 //        String_tutorial.run();
 //        ArrayTutorial.run();
-        constant_tutorial.run();
+//        constant_tutorial.run();
+//        ScannerTutorial.run();
+        BooleanTutorial.isGreater();
+
     }
 }
