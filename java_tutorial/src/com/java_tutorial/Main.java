@@ -1,17 +1,14 @@
 package com.java_tutorial;
-
-import java.util.Date;
+import com.java_tutorial.InheritanceTutorial.TextBox;
+import com.java_tutorial.InheritanceTutorial.UIControl;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-//        PointObject.print_point_objects();
-//        String_tutorial.run();
-//        ArrayTutorial.run();
-//        constant_tutorial.run();
-//        ScannerTutorial.run();
-        BooleanTutorial.isGreater();
-
+        var textBox = new TextBox();
+        textBox.enable();
+        System.out.println(textBox.toString());
     }
+
+
 }

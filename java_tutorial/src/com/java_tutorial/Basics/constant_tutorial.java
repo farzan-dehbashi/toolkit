@@ -1,4 +1,4 @@
-package com.java_tutorial;
+package com.java_tutorial.Basics;
 
 public class constant_tutorial {
     public static void run(){
