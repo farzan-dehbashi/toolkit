@@ -1,4 +1,3 @@
-// scss-docs-start caret-mixins
 @mixin caret-down {
   border-top: $caret-width solid;
   border-right: $caret-width solid transparent;
@@ -13,14 +12,14 @@
   border-left: $caret-width solid transparent;
 }
 
-@mixin caret-end {
+@mixin caret-right {
   border-top: $caret-width solid transparent;
   border-right: 0;
   border-bottom: $caret-width solid transparent;
   border-left: $caret-width solid;
 }
 
-@mixin caret-start {
+@mixin caret-left {
   border-top: $caret-width solid transparent;
   border-right: $caret-width solid;
   border-bottom: $caret-width solid transparent;
@@ -30,29 +29,33 @@
   @if $enable-caret {
     &::after {
       display: inline-block;
-      margin-left: $caret-spacing;
-      vertical-align: $caret-vertical-align;
+      width: 0;
+      height: 0;
+      margin-left: $caret-width * .85;
+      vertical-align: $caret-width * .85;
       content: "";
       @if $direction == down {
-        @include caret-down();
+        @include caret-down;
       } @else if $direction == up {
-        @include caret-up();
-      } @else if $direction == end {
-        @include caret-end();
+        @include caret-up;
+      } @else if $direction == right {
+        @include caret-right;
       }
     }
 
-    @if $direction == start {
+    @if $direction == left {
       &::after {
         display: none;
       }
 
       &::before {
         display: inline-block;
-        margin-right: $caret-spacing;
-        vertical-align: $caret-vertical-align;
+        width: 0;
+        height: 0;
+        margin-right: $caret-width * .85;
+        vertical-align: $caret-width * .85;
         content: "";
-        @include caret-start();
+        @include caret-left;
       }
     }
 
@@ -61,4 +64,3 @@
     }
   }
 }
-// scss-docs-end caret-mixins
