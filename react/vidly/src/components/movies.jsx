@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import movi
+import {getMovies} from '../services/fakeMovieService'
 import "./App.css"
 class Movies extends Component {
     state = {  } 
