@@ -1,28 +1,17 @@
 package com.api_test.amberscript;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
 // import java.util.HashMap;
 // import java.util.Map;
 // import java.util.Scanner;
@@ -54,7 +43,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AmberscriptApplication {
 	public static void main(String[] args) {
-		send();
 		check();
 		check();
 		get();
@@ -62,7 +50,7 @@ public class AmberscriptApplication {
 
 	public static void get() {
 		try {
-			String jobId = "";
+			String jobId = "62ec377b5e0b80225efcbb00";
 			String apiKey = "26fe6e92ac6ec36f7cb5c311dd36436fd";
 			String url = "https://qs.amberscript.com/jobs/export-stl?jobId=" + jobId + "&apiKey=" + apiKey;
 		} catch (Exception e) {
@@ -72,7 +60,7 @@ public class AmberscriptApplication {
 
 	public static void check() {
 		try {
-			String jobId = "";
+			String jobId = "62ec377b5e0b80225efcbb00";
 			String apiKey = "26fe6e92ac6ec36f7cb5c311dd36436fd";
 			String url = "https://api.amberscript.com/api/jobs/export-srt?jobId=" + jobId + "&apiKey=";
 			CloseableHttpClient client = HttpClients.createDefault();
@@ -100,8 +88,8 @@ public class AmberscriptApplication {
 			reqbuilder.setEntity(mutiPartHttpEntity);
 			HttpUriRequest multipartRequest = reqbuilder.build();
 			HttpResponse httpresponse = httpClient.execute(multipartRequest);
-			JSONObject obj = new JSONObject(responseString);
-			String jobId = obj.getJSONObject("jobStatus").getString("jobId");
+			// JSONObject obj = new JSONObject(responseString);
+			// String jobId = obj.getJSONObject("jobStatus").getString("jobId");
 			System.out.println(httpresponse.toString());
 			httpClient.close();
 		} catch (Exception e) {
