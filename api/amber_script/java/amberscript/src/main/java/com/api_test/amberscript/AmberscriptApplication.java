@@ -23,9 +23,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AmberscriptApplication {
 	public static void main(String[] args) {
 		// AmberscriptApiResponse checkResponse = check("62ec377b5e0b80225efcbb00",
-		// "26fe6e92ac6ec36f7cb5c311dd36436fd");
+		// "26fe6e92ac6ec36f7cb5c311dd36436ff");
 		AmberscriptGetCaptionResponse capResposne = getCaption("62e96a8d2ba2ee71d3a6f0ac",
-				"26fe6e92ac6ec36f7cb5c311dd36436fd",
+				"26fe6e92ac6ec36f7cb5c311dd36436ff",
 				"srt");
 		System.out.println(capResposne.caption);
 	}
@@ -70,7 +70,7 @@ public class AmberscriptApplication {
 		try {
 			String url = "https://qs.amberscript.com/jobs/status?jobId=" + jobId + "&apiKey=" + apiKey;
 			// String url =
-			// "https://qs.amberscript.com/jobs/status?jobId=62ec377b5e0b80225efcbb00&apiKey=26fe6e92ac6ec36f7cb5c311dd36436fd";
+			// "https://qs.amberscript.com/jobs/status?jobId=62ec377b5e0b80225efcbb00&apiKey=26fe6e92ac6ec36f7cb5c311dd36436ff";
 			CloseableHttpClient client = HttpClients.createDefault();
 			HttpGet get = new HttpGet(url);
 			HttpResponse response = client.execute(get);
@@ -94,8 +94,6 @@ public class AmberscriptApplication {
 	public static void send() {
 		try {
 			CloseableHttpClient httpClient = HttpClients.createDefault();
-			// HttpPost httpPost = new HttpPost(
-			// "https://httpbin.org/post?transcriptionType=transcription&jobType=direct&language=fi&apiKey=26fe6e92ac6ec36f7cb5c311dd36436fd");
 			final File file = new File("C:\\Users\\Farzan Dehbashi\\Desktop\\music.mp3");
 			FileBody filebody = new FileBody(file, ContentType.MULTIPART_FORM_DATA);
 			MultipartEntityBuilder entitybuilder = MultipartEntityBuilder.create();
@@ -103,7 +101,7 @@ public class AmberscriptApplication {
 			entitybuilder.addBinaryBody("file", file);
 			HttpEntity mutiPartHttpEntity = entitybuilder.build();
 			RequestBuilder reqbuilder = RequestBuilder.post(
-					"https://qs.amberscript.com/jobs/upload-media?transcriptionType=transcription&jobType=direct&language=fi&apiKey=26fe6e92ac6ec36f7cb5c311dd36436fd");
+					"https://qs.amberscript.com/jobs/upload-media?transcriptionType=transcription&jobType=direct&language=fi&apiKey=26fe6e92ac6ec36f7cb5c311dd36436ff");
 			// HttpResponse httpResponse = httpClient.execute(httpPost);
 			reqbuilder.setEntity(mutiPartHttpEntity);
 			HttpUriRequest multipartRequest = reqbuilder.build();
