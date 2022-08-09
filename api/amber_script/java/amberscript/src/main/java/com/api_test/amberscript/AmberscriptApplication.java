@@ -8,6 +8,9 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
@@ -21,13 +24,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class AmberscriptApplication {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		FileWriter myWriter = new FileWriter("filename.txt");
+		myWriter.write("Files in Java might be tricky, but it is fun enough!");
+		myWriter.close();
 		// AmberscriptApiResponse checkResponse = check("62ec377b5e0b80225efcbb00",
 		// "26fe6e92ac6ec36f7cb5c311dd36436ff");
-		AmberscriptGetCaptionResponse capResposne = getCaption("62e96a8d2ba2ee71d3a6f0ac",
-				"26fe6e92ac6ec36f7cb5c311dd36436ff",
-				"srt");
-		System.out.println(capResposne.caption);
+		// AmberscriptGetCaptionResponse capResposne =
+		// getCaption("62e96a8d2ba2ee71d3a6f0ac",
+		// "26fe6e92ac6ec36f7cb5c311dd36436ff",
+		// "srt");
+		// System.out.println(capResposne.caption);
 	}
 
 	private static class AmberscriptGetCaptionResponse {
