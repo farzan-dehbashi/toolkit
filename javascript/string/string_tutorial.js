@@ -1,0 +1,1 @@
+let blogPost = new BlogPost('title', 'body', 'author', 'views', 'comments', ())
