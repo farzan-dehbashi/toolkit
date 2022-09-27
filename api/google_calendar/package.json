@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "googleapis": "^105.0.0"
+  },
+  "name": "google_calendar",
+  "version": "1.0.0",
+  "description": "This is a google calendar project to test api",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
