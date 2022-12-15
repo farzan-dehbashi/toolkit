@@ -1,3 +1,5 @@
-from sales import calc_shipping
+from ecommerce.shopping import sales
 
-calc_shipping()
+sales.calc_shipping()
+print(dir(sales))
+
