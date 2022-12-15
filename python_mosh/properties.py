@@ -6,17 +6,17 @@ class Product:
     def price(self):
         return self.__price
 
-    @property.setter
+    @price.setter
     def price(self, value):
         if value <= 0:
             raise ValueError
         self.__price = value
 
-    @property.getter
+    @price.getter
     def price(self):
         return self.__price
 
 
 product = Product(10)
 product.price = -1
-print(product.get_price())
+print(product.price)
