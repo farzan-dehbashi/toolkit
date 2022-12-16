@@ -11,3 +11,5 @@ class Stream(ABC):
     @abstractclassmethod
     def write(self):
         pass
+
+
