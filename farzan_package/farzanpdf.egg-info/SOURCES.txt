@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+farzanpdf/__init__.py
+farzanpdf/pdf2text.py
+farzanpdf.egg-info/PKG-INFO
+farzanpdf.egg-info/SOURCES.txt
+farzanpdf.egg-info/dependency_links.txt
+farzanpdf.egg-info/top_level.txt
