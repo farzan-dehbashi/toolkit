@@ -2,28 +2,32 @@ class MinimalRoute():
 
     def __init__(self, nodes) -> None:
         self.nodes = nodes
-    
-    def get_shortest_path(self, hub):
+
+    def get_shortest_path(self, start, end):
         visited = set()
-        queue = list()
-        routes = dict()
+        queue = [[start]]
 
-        if hub in self.nodes:
-            queue.append(hub)
-        
+        if start == end:
+            return [start]
+
         while queue:
-            cursor = queue.pop(0)
-            if not cursor in visited:
-                visited.add(cursor)
-                print(cursor)
-                for neighbour in nodes[cursor]:
-                    if not neighbour in visited:
-                        queue.append(neighbour)
-            
+            path = queue.pop(0)
+            node = path[-1]
+            if node not in visited:
+                visited.add(node)
+                for neighbour in self.nodes[node]:
+                    new_path = list(path) + [neighbour]
+                    if neighbour == end:
+                        return new_path
+                    queue.append(new_path)
+        return None
 
 
-
-nodes = {'a':{'b','c'}, 'b':{'a','g','d'}, 'c':{'a','d','e'}, 'd':{'b','c','f'}, 'e':{'c','f'}, 'f':{'d','g','e'}, 'g':{'b','f'}}
-minimal_route = MinimalRoute(nodes)
-print(minimal_route.get_shortest_path('a'))
-    
+if __name__ == "__main__":
+    nodes = {
+        'a': {'b', 'c'}, 'b': {'a', 'g', 'd'}, 'c': {'a', 'd', 'e'},
+        'd': {'b', 'c', 'f'}, 'e': {'c', 'f'}, 'f': {'d', 'g', 'e'},
+        'g': {'b', 'f'}
+    }
+    route = MinimalRoute(nodes)
+    print(route.get_shortest_path('a', 'g'))
