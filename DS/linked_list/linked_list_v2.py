@@ -28,6 +28,7 @@ class LinkedList:
         while cursor:
             length += 1
             cursor = cursor.next
+        return length
 
     def add(self, val):
         new_node = Node(val)
