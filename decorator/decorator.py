@@ -4,8 +4,10 @@ def log_timer(original_func):
         t1 = time.time()
         result = original_func(*args, **kwargs)
         t2 = time.time()
-        print(f'{original_func.__name__} ran in {t2 - t1} seconds.')
+        print(f'{original_func.__name__} ran in {t2 - t1:.4f} seconds.')
+        return result
     return wrapper
+
 
 @log_timer
 def display():
@@ -15,5 +17,5 @@ def display():
     print('my func stopped working')
 
 
-
-display()
+if __name__ == "__main__":
+    display()
