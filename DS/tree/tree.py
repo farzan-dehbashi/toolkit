@@ -1,14 +1,20 @@
 class TreeNode:
-    def __init__(self, data, childeren = []):# how to get it using arks and qarks
+    def __init__(self, data, children=None):
         self.data = data
-        self.childeren = childeren
+        self.children = children if children is not None else []
 
-    def add_child(self, TreeNode):
-        self.childeren.append(TreeNode)
+    def add_child(self, node):
+        self.children.append(node)
 
-tree = TreeNode('drinks',[])
-cold = TreeNode('cold', [])
-hot = TreeNode('hot', [])
-tree.add_child(hot)
-tree.add_child(cold)
-print(tree)
+    def __repr__(self):
+        return f"TreeNode({self.data!r})"
+
+
+if __name__ == "__main__":
+    tree = TreeNode('drinks')
+    cold = TreeNode('cold')
+    hot = TreeNode('hot')
+    tree.add_child(cold)
+    tree.add_child(hot)
+    print(tree)
+    print(tree.children)
