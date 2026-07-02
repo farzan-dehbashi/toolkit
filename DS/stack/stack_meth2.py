@@ -47,18 +47,14 @@ class Stack:
         else:
             return self.head
 
-    # def display(self):
-    #
-    #     iternode = self.head
-    #     if self.is_empty():
-    #         print("Stack Underflow")
-    #
-    #     else:
-    #
-    #         while (iternode != None):
-    #             print(iternode.val)
-    #             iternode = iternode.next
-    #         return
+    def display(self):
+        if self.is_empty():
+            print('Stack Underflow')
+        else:
+            iternode = self.head
+            while iternode is not None:
+                print(iternode.val)
+                iternode = iternode.next
 
 stack = Stack()
 stack.push(1)
