@@ -15,7 +15,7 @@ class BinaryTree:
             self.last_used_index += 1
             return f'{value} added'
 
-    def serach(self, val):
+    def search(self, val):
         if val in self.roster:
             return self.roster.index(val)
         else:
@@ -24,5 +24,5 @@ class BinaryTree:
 binary_tree = BinaryTree(3)
 binary_tree.insert('coffee')
 binary_tree.insert('water')
-print(binary_tree.serach('water'))
+print(binary_tree.search('water'))
 print(str(binary_tree))
